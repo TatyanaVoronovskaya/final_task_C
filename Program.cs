@@ -33,3 +33,13 @@ bool NPositive(int n)                  // проверка положитель�
         return true;
     }
 }
+
+string[] StringArray(int n)   // ввод массива пользователем
+{
+    string[] arrayS = new string[n];
+    for (int j = 0; j < n; j++)
+    {
+        arrayS[j] = ReadString($"Введите {j + 1} элемент массива");
+    }
+    return arrayS;
+}
