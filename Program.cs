@@ -43,3 +43,18 @@ string[] StringArray(int n)   // ввод массива пользовател�
     }
     return arrayS;
 }
+
+string ReadString(string message)           // считывание строки
+{
+    System.Console.Write($"{message} > ");
+    string newString = Console.ReadLine();
+    return newString;
+}
+
+void PrintArray(string[] array)          // вывод массива
+{
+    foreach (string item in array)
+    {
+        System.Console.Write($"{item} ");
+    }
+}
