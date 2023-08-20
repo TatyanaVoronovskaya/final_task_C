@@ -58,3 +58,16 @@ void PrintArray(string[] array)          // вывод массива
         System.Console.Write($"{item} ");
     }
 }
+int CalcChar3(int n, string[] array) // посчитать кол-во элементов массива меньше 3
+{
+    int count = 0;
+    string[] array3shar = new string[n];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length < 4)
+        {
+            count++;
+        }
+    }
+    return count;
+}
