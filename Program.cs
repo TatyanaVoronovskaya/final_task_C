@@ -71,3 +71,33 @@ int CalcChar3(int n, string[] array) // посчитать кол-во элем�
     }
     return count;
 }
+
+string[] Array3char(int count, string[] array)     // массив из элементов < 3 символов 
+{
+    string[] array3shar = new string[count];
+    int j = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length < 4)
+        {
+            array3shar[j] = array[i];
+            j++;
+        }
+    }
+    return array3shar;
+}
+
+int n = ReadInt("Введите количество элементов массива > ");   // вводим количество элементов массива
+if (NPositive(n) == true)
+{
+    System.Console.WriteLine($" Число элементов массива = {n}");
+}
+string [] newArray = StringArray(n);                        // создаем массив строк
+int count = CalcChar3(n, newArray);                            // находим кол-во элементов с числом символов меньше3
+string[] Arr3char = Array3char(count, newArray);            // новый массив
+System.Console.WriteLine();
+System.Console.WriteLine("исходный массив =");
+PrintArray(newArray);
+System.Console.WriteLine();
+System.Console.WriteLine("новый массив =");
+PrintArray(Arr3char);
